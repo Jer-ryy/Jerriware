@@ -18,7 +18,6 @@ The site is a dark-themed, multi-page portfolio served by a small Express server
 - **Server:** Node.js, Express
 - **Front end:** HTML, CSS, vanilla JavaScript, Bootstrap 5
 - **Fonts and icons:** Inter, JetBrains Mono, Bootstrap Icons
-- **Deployment:** Azure App Service via GitHub Actions
 
 ## Project structure
 
@@ -63,10 +62,6 @@ Add an entry to the `projects` array in `public/projects/index.js`:
   imgSrc: "Cover-Image.png",  // file in public/assets/, or "" for a placeholder cover
 }
 ```
-
-## Deployment
-
-Pushing to `main` triggers `.github/workflows/main_jerryng.yml`, which builds the app and deploys it to the `jerryng` Azure App Service.
 
 ## Contact
 
