@@ -1,10 +1,10 @@
 // Renders the shared navbar and footer. Pages set <body data-page="home|resume|projects|contact">.
 (function () {
   const pages = [
-    { id: 'home', label: 'Home', href: '/home' },
-    { id: 'resume', label: 'Resume', href: '/resume' },
-    { id: 'projects', label: 'Projects', href: '/projects' },
-    { id: 'contact', label: 'Contact', href: '/contact' },
+    { id: 'home', label: 'Home', href: '../home/' },
+    { id: 'resume', label: 'Resume', href: '../resume/' },
+    { id: 'projects', label: 'Projects', href: '../projects/' },
+    { id: 'contact', label: 'Contact', href: '../contact/' },
   ];
   const socials = [
     { icon: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/just_jerryng/' },
@@ -21,7 +21,7 @@
   document.body.insertAdjacentHTML('afterbegin', `
     <nav class="navbar fixed-top navbar-expand-lg site-nav">
       <div class="container">
-        <a class="navbar-brand" href="/home"><img src="/assets/logo-v4.png" class="nav-logo" alt="Jerry"></a>
+        <a class="navbar-brand" href="../home/"><img src="../assets/logo-v4.png" class="nav-logo" alt="Jerry"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
           aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
