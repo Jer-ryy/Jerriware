@@ -130,6 +130,48 @@ a:hover { color: #e07bff; }
 }
 .btn-ghost:hover { color: var(--text); border-color: var(--accent); background: var(--surface); }
 
+/* ---------- Editor panels ---------- */
+.terminal {
+  background: #0f0f16;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--mono);
+  overflow: hidden;
+}
+/* VS Code-style tab bar: one active editor tab on a darker strip */
+.terminal-bar {
+  display: flex;
+  align-items: stretch;
+  background: #0a0a0f;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+}
+.terminal-bar .tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.75rem 0.55rem 0.9rem;
+  background: #0f0f16; /* same as the editor body, so the tab looks attached */
+  color: var(--text);
+  border-top: 2px solid var(--accent);
+  border-right: 1px solid var(--border);
+  margin-bottom: -1px; /* covers the strip's bottom border under the active tab */
+}
+.terminal-bar .tab .bi-markdown { color: #519aba; }
+.terminal-bar .tab .bi-terminal { color: #89e051; }
+.terminal-bar .tab .bi-filetype-py { color: #f0c674; }
+.terminal-bar .tab-close {
+  display: grid;
+  place-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.25rem;
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.terminal-bar .tab-close:hover { background: var(--surface-2); color: var(--text); }
+
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--border);
