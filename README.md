@@ -1,3 +1,74 @@
-# Jerry Portfolio
-![My Logo](/frontend/public/assets/logo-v4.png)
+# Jerriware Portfolio
 
+My personal portfolio site. I'm a software engineer moving into applied AI, studying for a Bachelor in Applied AI at the Singapore Institute of Technology.
+
+The site is a dark-themed, multi-page portfolio served by a small Express server, with no front-end framework or build step.
+
+## Pages
+
+| Page | What's on it |
+| --- | --- |
+| **Home** | Typewriter hero, tech stack, a Python "code card" intro and an about section |
+| **Projects** | Project grid with category filters (All / Design / Web) |
+| **Resume** | Experience, projects, education and skills in VS Code-style panels, with a PDF download |
+| **Contact** | Validated contact form that opens a pre-filled email |
+
+## Tech stack
+
+- **Server:** Node.js, Express
+- **Front end:** HTML, CSS, vanilla JavaScript, Bootstrap 5
+- **Fonts and icons:** Inter, JetBrains Mono, Bootstrap Icons
+- **Deployment:** Azure App Service via GitHub Actions
+
+## Project structure
+
+```
+app.js              Express server: serves /public and redirects / to /home
+public/
+  global/
+    theme.css       Shared dark theme: colours, buttons, panels, forms, navbar, footer
+    layout.js       Injects the shared navbar and footer into every page
+  home/             Each page has its own index.html, index.css and index.js
+  projects/
+  resume/
+  contact/
+  assets/           Images and the resume PDF
+  bootstrap/        Bootstrap 5 CSS and JS
+```
+
+Every page links `global/theme.css` and `global/layout.js`. The navbar highlights the current page from the `data-page` attribute on `<body>`.
+
+## Running locally
+
+Requires Node.js 18 or later.
+
+```bash
+npm install
+node app.js
+```
+
+Then open http://localhost:3000. Set the `PORT` environment variable to use a different port.
+
+## Adding a project
+
+Add an entry to the `projects` array in `public/projects/index.js`:
+
+```js
+{
+  title: "Project name",
+  category: "web",            // matches a filter button: "design" or "web"
+  tools: ["Python", "Node.js"],
+  desc: "One-line description.",
+  projLink: "https://...",    // leave empty for no link
+  imgSrc: "Cover-Image.png",  // file in public/assets/
+}
+```
+
+## Deployment
+
+Pushing to `main` triggers `.github/workflows/main_jerryng.yml`, which builds the app and deploys it to the `jerryng` Azure App Service.
+
+## Contact
+
+- Email: [jerryngsw2@gmail.com](mailto:jerryngsw2@gmail.com)
+- LinkedIn: [linkedin.com/in/jerry-ng-05ab18211](https://www.linkedin.com/in/jerry-ng-05ab18211/)
