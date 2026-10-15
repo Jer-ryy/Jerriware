@@ -35,3 +35,33 @@
   color: #d6d68a;
   font-family: var(--mono);
 }
+
+/* Education */
+.edu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.edu:last-child { border-bottom: 0; padding-bottom: 0; }
+.edu:first-of-type { padding-top: 0; }
+.edu-name { font-weight: 600; }
+.edu-date { font-size: 0.78rem; color: #f0c674; white-space: nowrap; }
+@media (max-width: 575px) {
+  .edu { flex-direction: column; gap: 0.25rem; }
+}
+
+/* Skills */
+.skill-label { font-size: 0.78rem; color: var(--muted); margin: 0 0 0.5rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.1rem; }
+.tags:last-child { margin-bottom: 0; }
+.tags span {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  padding: 0.3rem 0.65rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
