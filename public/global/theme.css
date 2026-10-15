@@ -191,6 +191,22 @@ a:hover { color: #e07bff; }
 }
 .terminal-bar .tab-close:hover { background: var(--surface-2); color: var(--text); }
 
+/* ---------- Forms ---------- */
+.form-control,
+.input-group-text {
+  background: var(--surface-2);
+  border-color: var(--border);
+  color: var(--text);
+}
+.form-control::placeholder { color: #6c6c84; }
+.form-control:focus {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(196, 60, 240, 0.2);
+}
+.input-group-text { color: var(--muted); }
+
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--border);
