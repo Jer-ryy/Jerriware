@@ -1,12 +1,9 @@
 .hero {
-  min-height: 100vh;
+  /* fill the screen above the footer */
+  min-height: calc(100vh - 6rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.logo {
-  width: 8rem;
 }
