@@ -57,3 +57,13 @@ function cardHTML(project) {
 }
 
 grid.innerHTML = projects.map(cardHTML).join('');
+
+document.querySelectorAll('.filter').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach((b) => b.classList.toggle('active', b === btn));
+    const filter = btn.dataset.filter;
+    grid.querySelectorAll('.project').forEach((el) => {
+      el.hidden = filter !== 'all' && el.dataset.category !== filter;
+    });
+  });
+});
