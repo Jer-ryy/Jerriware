@@ -2,13 +2,14 @@
 
 My personal portfolio site. I'm a software engineer moving into applied AI, studying for a Bachelor in Applied AI at the Singapore Institute of Technology.
 
-The site is a dark-themed, multi-page portfolio served by a small Express server, with no front-end framework or build step.
+The site is a dark-themed, single scrolling page with no front-end framework or build step. It's hosted on GitHub Pages, and a small Express server runs it locally.
 
-## Pages
+## Sections
 
-| Page | What's on it |
+| Section | What's on it |
 | --- | --- |
-| **Home** | Typewriter hero, tech stack, a Python "code card" intro and an about section |
+| **Home** | Typewriter hero, tech stack and a Python "code card" intro |
+| **About** | Three cards: applied AI, automation and full stack |
 | **Projects** | Project grid with category filters (All / Design / Web) |
 | **Resume** | Experience, projects, education and skills in VS Code-style panels, with a PDF download |
 | **Contact** | Validated contact form that opens a pre-filled email |
@@ -22,20 +23,18 @@ The site is a dark-themed, multi-page portfolio served by a small Express server
 ## Project structure
 
 ```
-app.js              Express server: serves /public and redirects / to /home
+app.js              Express server for running the site locally
 public/
+  index.html        The whole site: home, about, projects, resume and contact sections
   global/
     theme.css       Shared dark theme: colours, buttons, panels, forms, navbar, footer
-    layout.js       Injects the shared navbar and footer into every page
-  home/             Each page has its own index.html, index.css and index.js
-  projects/
-  resume/
-  contact/
+    layout.js       Injects the navbar and footer; their links jump to each section
+  sections/         Styles and scripts for each section (home, projects, resume, contact)
   assets/           Images and the resume PDF
   bootstrap/        Bootstrap 5 CSS and JS
+.github/workflows/
+  static.yml        Deploys public/ to GitHub Pages on every push to main
 ```
-
-Every page links `global/theme.css` and `global/layout.js`. The navbar highlights the current page from the `data-page` attribute on `<body>`.
 
 ## Running locally
 
@@ -50,7 +49,7 @@ Then open http://localhost:3000. Set the `PORT` environment variable to use a di
 
 ## Adding a project
 
-Add an entry to the `projects` array in `public/projects/index.js`:
+Add an entry to the `projects` array in `public/sections/projects.js`:
 
 ```js
 {

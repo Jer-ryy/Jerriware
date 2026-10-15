@@ -103,6 +103,10 @@ a:hover { color: #e07bff; }
 
 .page { padding-top: 7.5rem; padding-bottom: 4rem; }
 
+/* one-page layout: the top padding also keeps headings clear of the fixed navbar when jumping to a section */
+.section { padding-top: 7rem; }
+#home { scroll-margin-top: 7.5rem; } /* matches .page padding, so "Home" scrolls back to the very top */
+
 /* ---------- Buttons ---------- */
 .btn-glow {
   background: var(--gradient);

@@ -3,14 +3,329 @@
 
 <head>
     <meta charset="utf-8" />
-    <!-- GitHub Pages has no server-side redirect, so send visitors to the home page -->
-    <meta http-equiv="refresh" content="0; url=home/">
-    <link rel="canonical" href="home/">
-    <title>Jerry Ng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0b10">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="global/theme.css">
+    <link rel="stylesheet" href="sections/home.css">
+    <link rel="stylesheet" href="sections/projects.css">
+    <link rel="stylesheet" href="sections/resume.css">
+    <link rel="stylesheet" href="sections/contact.css">
+    <title>Jerry Ng · AI Engineer</title>
 </head>
 
 <body>
-    <p><a href="home/">Go to Jerry Ng's portfolio</a></p>
+    <main class="page">
+        <!-- Home -->
+        <section id="home" class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span class="status-pill reveal"><span class="pulse"></span> Jerry v3.0 &middot; open to AI engineering roles</span>
+
+                    <p class="hello mono mt-4 mb-2 reveal d1">Hi, my name is <span class="text-gradient fw-bold">Jerry Ng()</span></p>
+                    <h1 class="hero-title reveal d1">I'm <span class="typewrite text-gradient"></span></h1>
+
+                    <p class="lead-copy text-muted mt-3 reveal d2">
+                        Software engineer moving into applied AI. I'm studying for a Bachelor in Applied AI at the
+                        Singapore Institute of Technology, building on a background in full-stack web development and
+                        automating real production workflows with Python.
+                    </p>
+
+                    <div class="stack reveal d2">
+                        <a class="ai" target="_blank" rel="noopener" href="https://www.python.org/">Python</a>
+                        <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
+                        <a target="_blank" rel="noopener" href="https://nodejs.org/en/about">Node.js</a>
+                        <a target="_blank" rel="noopener" href="https://react.dev/">React.js</a>
+                        <a target="_blank" rel="noopener" href="https://nextjs.org/">Next.js</a>
+                        <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Glossary/REST">REST APIs</a>
+                        <a target="_blank" rel="noopener" href="https://www.mysql.com/">SQL</a>
+                        <a target="_blank" rel="noopener" href="https://aws.amazon.com/">AWS</a>
+                        <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a>
+                        <a target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/">Bash</a>
+                    </div>
+
+                    <div class="reveal d3">
+                        <p class="fw-bold mt-4 mb-2">Connect with me</p>
+                        <a class="cmd-line" href="mailto:jerryngsw2@gmail.com?subject=Collaboration&body=Hi%20Jerry,%0D%0A%0D%0AI%20want%20to%20work%20with%20you.%0D%0A%0D%0AYours%20sincerely,%0D%0A">
+                            <span><span class="prompt">~$</span> pip install jerryngsw2@gmail.com</span>
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                        <p class="small text-muted mt-2 mb-0">Click to email me, or <button type="button" class="link-btn" id="copy-btn">copy the address</button>.</p>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mt-4 reveal d4">
+                        <a class="btn btn-glow" href="#resume">Resume</a>
+                        <a class="btn btn-ghost" href="#projects">Projects</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal d2">
+                    <div class="terminal code-card">
+                        <div class="terminal-bar"><span class="tab"><i class="bi bi-filetype-py"></i> jerry.py <i class="bi bi-x tab-close" aria-hidden="true"></i></span></div>
+<pre class="code"><code><span class="line"><span class="k">class</span> <span class="c">Jerry</span>(<span class="c">Engineer</span>):</span>
+<span class="line">    role <span class="o">=</span> <span class="s">"AI Engineer"</span></span>
+<span class="line">    based_in <span class="o">=</span> <span class="s">"Singapore"</span></span>
+<span class="line">    studying <span class="o">=</span> <span class="s">"Applied AI @ SIT"</span></span>
+<span class="line"></span>
+<span class="line">    stack <span class="o">=</span> [<span class="s">"Python"</span>, <span class="s">"JavaScript"</span>, <span class="s">"Node.js"</span>,</span>
+<span class="line">             <span class="s">"React"</span>, <span class="s">"Next.js"</span>, <span class="s">"AWS"</span>]</span>
+<span class="line"></span>
+<span class="line">    <span class="k">def</span> <span class="f">build</span>(<span class="p">self</span>, idea):</span>
+<span class="line">        <span class="cm"># automate the boring parts, ship the useful ones</span></span>
+<span class="line">        model <span class="o">=</span> <span class="p">self</span>.<span class="f">train</span>(idea)</span>
+<span class="line">        <span class="k">return</span> <span class="p">self</span>.<span class="f">ship</span>(model)</span>
+<span class="line"></span>
+<span class="line">jerry <span class="o">=</span> <span class="c">Jerry</span>()</span>
+<span class="line">jerry.<span class="f">build</span>(<span class="s">"something useful"</span>)<span class="cursor"></span></span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="container section">
+            <div class="text-center mb-5">
+                <p class="section-eyebrow mb-2">~$ python jerry.py</p>
+                <h2 class="section-title display-6">From web engineering <span class="text-gradient">to applied AI</span></h2>
+                <p class="text-muted mx-auto mt-3" style="max-width: 640px;">
+                    Engineering habits from shipping and running production websites, applied to building AI systems
+                    that work outside a notebook.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="panel trait h-100">
+                        <div class="trait-icon"><i class="bi bi-cpu"></i></div>
+                        <h3>Applied AI</h3>
+                        <p class="text-muted mb-0">Studying for a Bachelor in Applied AI at SIT, focused on turning
+                            models into useful, real-world products.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel trait h-100">
+                        <div class="trait-icon"><i class="bi bi-lightning-charge"></i></div>
+                        <h3>Automation</h3>
+                        <p class="text-muted mb-0">Built Python, Bash and PowerShell scripts that cut routine
+                            operational tasks from hours to near-instant.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel trait h-100">
+                        <div class="trait-icon"><i class="bi bi-layers"></i></div>
+                        <h3>Full stack</h3>
+                        <p class="text-muted mb-0">Node.js, React and Next.js experience to wrap AI in APIs and
+                            interfaces people can actually use.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="container section">
+            <header class="text-center mb-5">
+                <p class="section-eyebrow mb-2">~$ ls ./projects</p>
+                <h2 class="section-title display-6"><span class="text-gradient">Projects</span></h2>
+                <p class="text-muted mx-auto mt-3" style="max-width: 560px;">
+                    A mix of design and development work.
+                </p>
+            </header>
+
+            <div class="filters" role="tablist" aria-label="Filter projects">
+                <button type="button" class="filter active" data-filter="all">All</button>
+                <button type="button" class="filter" data-filter="design">Design</button>
+                <button type="button" class="filter" data-filter="web">Web</button>
+            </div>
+
+            <div class="row g-4 justify-content-center" id="project-grid"></div>
+        </section>
+
+        <!-- Resume -->
+        <section id="resume" class="container section">
+            <header class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 mb-5">
+                <div class="text-center text-md-start">
+                    <p class="section-eyebrow mb-2">~$ cat resume.md</p>
+                    <h2 class="section-title display-6 mb-0"><span class="text-gradient">Resume</span></h2>
+                </div>
+                <a class="btn btn-glow" href="assets/Resume.pdf" download="Jerry_Ng_Resume.pdf">
+                    <i class="bi bi-download me-2"></i>Download PDF
+                </a>
+            </header>
+
+            <div class="row g-4">
+                <!-- Overview -->
+                <div class="col-12">
+                    <div class="panel p-4">
+                        <h3 class="block-title">Professional overview</h3>
+                        <p class="overview mb-0">
+                            Web developer with a strong technical foundation in JavaScript, Python, HTML/CSS, Bash, and
+                            PowerShell. Experienced with Node.js, React.js, Next.js, SQL, Git, and RESTful APIs, along with
+                            cloud platforms like AWS. Skilled in Content Management Systems (AEM, WordPress) and SEO best
+                            practices, with a process-improvement mindset geared toward building efficient, scalable web
+                            solutions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="col-lg-6">
+                    <div class="terminal h-100">
+                        <div class="terminal-bar"><span class="tab"><i class="bi bi-markdown"></i> work_experience.md <i class="bi bi-x tab-close" aria-hidden="true"></i></span></div>
+                        <div class="entry">
+                            <span class="role"><i class="bi bi-globe2"></i> Web Operations</span>
+                            <span class="org">Convertium, Singapore</span>
+                            <span class="date">`Sept 2023 – Mar 2024`</span>
+                            <ul class="points">
+                                <li>Supported the maintenance and performance of 10+ production websites across multiple Content Management Systems.</li>
+                                <li>Built automation scripts using Python, Bash, and PowerShell to replace manual operational workflows, cutting routine task time from hours to near-instant execution.</li>
+                                <li>Used JavaScript for scripting and light web development, contributing front-end fixes and enhancements alongside the core operations role.</li>
+                                <li>Gained hands-on experience across CMS platforms including Adobe Experience Manager (AEM) and WordPress for content publishing and site management.</li>
+                                <li>Conducted daily SEO audits across all 10 sites, resolving issues such as broken links and meta tag errors to maintain search visibility and site health.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume projects -->
+                <div class="col-lg-6">
+                    <div class="terminal h-100">
+                        <div class="terminal-bar"><span class="tab"><i class="bi bi-markdown"></i> projects.md <i class="bi bi-x tab-close" aria-hidden="true"></i></span></div>
+                        <div class="entry">
+                            <span class="role"><i class="bi bi-clipboard2-pulse"></i> OBS Medical Records Management</span>
+                            <span class="org">National Youth Council Singapore</span>
+                            <span class="date">`Apr 2023 – Sept 2023`</span>
+                            <ul class="points">
+                                <li>Collaborated with stakeholders from the National Youth Council Singapore (NYC) to design and develop a web application for Outward Bound Singapore (OBS), digitising medical form processing and eliminating paper-based registration workflows.</li>
+                                <li>Built the application using Node.js and the Express MVC framework, with PlanetScale (MySQL) for database management.</li>
+                                <li>Designed the interface in Figma and Adobe Illustrator for an intuitive experience for medical examiners and administrative staff.</li>
+                                <li>Followed Agile/Scrum with bi-weekly sprints and client meetings, delivering the final product to NYC within an 18-week timeline.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="col-lg-6">
+                    <div class="panel p-4 h-100">
+                        <h3 class="block-title">Education</h3>
+                        <div class="edu">
+                            <div>
+                                <p class="edu-name mb-0">Bachelor in Applied AI</p>
+                                <p class="text-muted mb-0">Singapore Institute of Technology</p>
+                            </div>
+                            <span class="edu-date mono">Currently studying</span>
+                        </div>
+                        <div class="edu">
+                            <div>
+                                <p class="edu-name mb-0">Diploma in Information Technology</p>
+                                <p class="text-muted mb-0">Singapore Polytechnic</p>
+                            </div>
+                            <span class="edu-date mono">Graduated 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="col-lg-6">
+                    <div class="panel p-4 h-100">
+                        <h3 class="block-title">Skills</h3>
+                        <p class="skill-label mono">languages</p>
+                        <div class="tags">
+                            <span>JavaScript</span><span>Python</span><span>HTML/CSS</span><span>Bash</span>
+                        </div>
+                        <p class="skill-label mono">technologies</p>
+                        <div class="tags">
+                            <span>Node.js</span><span>React.js</span><span>Next.js</span><span>AWS</span><span>SQL</span>
+                            <span>Git</span><span>REST APIs</span><span>AEM</span>
+                        </div>
+                        <p class="skill-label mono">competencies</p>
+                        <div class="tags">
+                            <span>SEO</span><span>Web Operations</span><span>Process Automation</span><span>Cross-site QA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="container section">
+            <header class="text-center mb-5">
+                <p class="section-eyebrow mb-2">~$ ping jerry</p>
+                <h2 class="section-title display-6"><span class="text-gradient">Contact Me</span></h2>
+                <p class="text-muted mx-auto mt-3" style="max-width: 520px;">
+                    Got a project, a role, or just want to say hi? Drop a message and I'll get back to you.
+                </p>
+            </header>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-7">
+                    <form id="contact-form" class="terminal" novalidate>
+                        <div class="terminal-bar"><span class="tab"><i class="bi bi-terminal"></i> new_message.sh <i class="bi bi-x tab-close" aria-hidden="true"></i></span></div>
+                        <div class="p-4">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="first-name" class="form-label">First name</label>
+                                    <input id="first-name" name="firstName" type="text" class="form-control" required autocomplete="given-name">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="last-name" class="form-label">Last name</label>
+                                    <input id="last-name" name="lastName" type="text" class="form-control" autocomplete="family-name">
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input id="email" name="email" type="email" class="form-control" required autocomplete="email">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" name="message" rows="6" class="form-control" required maxlength="1000"></textarea>
+                                    <div class="form-text mono text-end" id="char-count">0 / 1000</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 justify-content-end mt-4">
+                                <button type="reset" class="btn btn-ghost">Reset</button>
+                                <button type="submit" class="btn btn-glow">Send <i class="bi bi-send ms-1"></i></button>
+                            </div>
+                            <p id="form-status" class="mono small mt-3 mb-0" role="status"></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="panel p-4 mb-4">
+                        <p class="block-label mono">Email</p>
+                        <a class="contact-link" href="mailto:jerryngsw2@gmail.com">jerryngsw2@gmail.com</a>
+                    </div>
+                    <div class="panel p-4 mb-4">
+                        <p class="block-label mono">Socials</p>
+                        <div class="d-flex flex-column gap-2">
+                            <a class="contact-link" href="https://www.linkedin.com/in/jerry-ng-05ab18211/" target="_blank" rel="noopener"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+                            <a class="contact-link" href="https://www.instagram.com/just_jerryng/" target="_blank" rel="noopener"><i class="bi bi-instagram me-2"></i>Instagram</a>
+                            <a class="contact-link" href="https://github.com/Jer-ryy" target="_blank" rel="noopener"><i class="bi bi-github me-2"></i>GitHub</a>
+                        </div>
+                    </div>
+                    <div class="panel p-4">
+                        <p class="block-label mono">Based in</p>
+                        <p class="mb-0">Singapore <span class="text-muted">· GMT+8</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="global/layout.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@2.21.0/dist/core.js"></script>
+    <script src="sections/home.js"></script>
+    <script src="sections/projects.js"></script>
+    <script src="sections/contact.js"></script>
 </body>
 
 </html>

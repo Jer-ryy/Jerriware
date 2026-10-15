@@ -40,7 +40,7 @@ function cardHTML(project) {
   const icon = project.category === 'web' ? 'bi-code-slash' : 'bi-palette';
   const media = project.imgSrc
     ? `<div class="cover">
-        <img src="../assets/${project.imgSrc}" class="cover-image" alt="${project.title}" loading="lazy" />
+        <img src="assets/${project.imgSrc}" class="cover-image" alt="${project.title}" loading="lazy" />
       </div>`
     : `<div class="cover cover-placeholder" aria-hidden="true">
         <i class="bi ${icon}"></i>

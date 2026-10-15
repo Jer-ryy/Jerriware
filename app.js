@@ -23,9 +23,7 @@ app.disable('x-powered-by');
 //////////////////////////////////////////////////////
 // DISPLAY SERVER RUNNING
 
-app.get('/',(req,res)=> {
-    res.redirect('/home')
-});
+// public/index.html is served at / by express.static above
 
 
 
