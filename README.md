@@ -60,7 +60,7 @@ Add an entry to the `projects` array in `public/projects/index.js`:
   tools: ["Python", "Node.js"],
   desc: "One-line description.",
   projLink: "https://...",    // leave empty for no link
-  imgSrc: "Cover-Image.png",  // file in public/assets/
+  imgSrc: "Cover-Image.png",  // file in public/assets/, or "" for a placeholder cover
 }
 ```
 

@@ -1,4 +1,4 @@
-// Add projects here.
+// Add projects here. Leave imgSrc empty to show a placeholder cover.
 const projects = [
   {
     title: "Movie Poster",
@@ -6,7 +6,7 @@ const projects = [
     tools: ["Photoshop"],
     desc: "A Black Adam fan poster built around the lightning-bolt silhouette.",
     projLink: "",
-    imgSrc: "Movie-Poster.png",
+    imgSrc: "",
   },
   {
     title: "Card Profile Poster",
@@ -14,7 +14,7 @@ const projects = [
     tools: ["Photoshop", "Illustrator"],
     desc: "A trading-card style self portrait with a JoJo twist.",
     projLink: "",
-    imgSrc: "Card.png",
+    imgSrc: "",
   },
   {
     title: "Magical Moments",
@@ -22,7 +22,7 @@ const projects = [
     tools: ["Photoshop"],
     desc: "A framed product ad for the Samsung Galaxy S6.",
     projLink: "",
-    imgSrc: "Magical-Moments.png",
+    imgSrc: "",
   },
   {
     title: "Website Design",
@@ -30,17 +30,22 @@ const projects = [
     tools: ["HTML/CSS", "JavaScript", "Bootstrap"],
     desc: "JARRIE, my first portfolio site, with filterable design and code work.",
     projLink: "",
-    imgSrc: "Website-Portfolio.png",
+    imgSrc: "",
   },
 ];
 
 const grid = document.getElementById('project-grid');
 
 function cardHTML(project) {
-  const media = `
-    <div class="cover">
-      <img src="../assets/${project.imgSrc}" class="cover-image" alt="${project.title}" loading="lazy" />
-    </div>`;
+  const icon = project.category === 'web' ? 'bi-code-slash' : 'bi-palette';
+  const media = project.imgSrc
+    ? `<div class="cover">
+        <img src="../assets/${project.imgSrc}" class="cover-image" alt="${project.title}" loading="lazy" />
+      </div>`
+    : `<div class="cover cover-placeholder" aria-hidden="true">
+        <i class="bi ${icon}"></i>
+        <span class="mono">image coming soon</span>
+      </div>`;
 
   return `
     <div class="col-sm-6 col-lg-4 col-xl-3 project" data-category="${project.category}">
