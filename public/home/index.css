@@ -150,3 +150,20 @@
   .code { font-size: 0.75rem; }
   .code .line::before { width: 2.2rem; padding-right: 0.75rem; }
 }
+
+/* About */
+.about { margin-top: 7rem; }
+
+.trait { padding: 1.75rem; transition: border-color 0.25s, transform 0.25s; }
+.trait:hover { border-color: #3a3a52; transform: translateY(-4px); }
+.trait h3 { font-size: 1.2rem; font-weight: 700; margin: 1rem 0 0.5rem; }
+.trait-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: #fff;
+  background: var(--gradient);
+}

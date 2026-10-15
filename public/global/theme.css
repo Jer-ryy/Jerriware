@@ -130,6 +130,25 @@ a:hover { color: #e07bff; }
 }
 .btn-ghost:hover { color: var(--text); border-color: var(--accent); background: var(--surface); }
 
+/* ---------- Surfaces ---------- */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.section-eyebrow {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+.section-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
 /* ---------- Editor panels ---------- */
 .terminal {
   background: #0f0f16;
