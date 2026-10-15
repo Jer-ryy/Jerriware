@@ -16,19 +16,35 @@
 
   const navLinks = sections.map((s) => `<a class="nav-link" href="#${s.id}">${s.label}</a>`).join('');
 
+  // Phones get just the logo bar and scroll through the page; the section links show from lg up.
   document.body.insertAdjacentHTML('afterbegin', `
     <nav class="navbar fixed-top navbar-expand-lg site-nav">
       <div class="container">
         <a class="navbar-brand" href="#home"><img src="assets/logo-v4.png" class="nav-logo" alt="Jerry"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
-          aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="siteNav">
-          <div class="navbar-nav ms-auto">${navLinks}</div>
-        </div>
+        <div class="navbar-nav ms-auto d-none d-lg-flex">${navLinks}</div>
       </div>
     </nav>`);
+
+  // Highlight the navbar link for the section crossing the middle of the screen.
+  const linkFor = (id) => document.querySelector(`.site-nav .nav-link[href="#${id}"]`);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      document.querySelectorAll('.site-nav .nav-link').forEach((a) => {
+        a.classList.remove('active');
+        a.removeAttribute('aria-current');
+      });
+      const link = linkFor(entry.target.id);
+      if (link) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'true');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach((s) => {
+    const el = document.getElementById(s.id);
+    if (el) observer.observe(el);
+  });
 
   const footerLinks = sections.map((s) => `<a href="#${s.id}">${s.label}</a>`).join('');
   const socialLinks = socials
