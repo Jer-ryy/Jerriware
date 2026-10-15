@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "express-form-data": "^2.0.23",
+    "mysql2": "^3.9.1",
+    "nodemon": "^3.0.3"
+  },
+  "name": "portfolio-jerry",
+  "description": "![My Logo](/frontend/public/assets/logo-v4.png)",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon client.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

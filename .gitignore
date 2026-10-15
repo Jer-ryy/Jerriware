@@ -1,0 +1,15 @@
+# dotenv environment variables file
+
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+.env
+```
+
+
+_parts/
+/public/assets/

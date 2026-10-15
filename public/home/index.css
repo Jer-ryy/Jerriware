@@ -1,0 +1,21 @@
+body {
+  background: #0b0b10;
+  color: #e8e8f0;
+}
+
+.text-muted {
+  color: #9a9ab0 !important;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 8rem;
+}
