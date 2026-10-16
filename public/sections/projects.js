@@ -68,7 +68,7 @@ function cardHTML(project) {
       </div>`;
 
   return `
-    <div class="col-sm-6 col-lg-4 col-xl-3 project" data-category="${project.category}">
+    <div class="col-sm-6 col-lg-4 project" data-category="${project.category}">
       <article class="project-card">
         ${project.projLink ? `<a href="${project.projLink}" target="_blank" rel="noopener">${media}</a>` : media}
         <div class="project-body">
