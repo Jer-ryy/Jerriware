@@ -18,34 +18,26 @@ const projects = [
     imgSrc: "stardustNvrLandGame.png",
   },
   {
-    title: "Movie Poster",
-    category: "design",
-    tools: ["Photoshop"],
-    desc: "A Black Adam fan poster built around the lightning-bolt silhouette.",
+    title: "Coming Soon",
+    category: "Coming Soon",
+    tools: ["Coming Soon"],
+    desc: "Coming Soon",
     projLink: "",
     imgSrc: "",
   },
   {
-    title: "Card Profile Poster",
-    category: "design",
-    tools: ["Photoshop", "Illustrator"],
-    desc: "A trading-card style self portrait with a JoJo twist.",
+    title: "Coming Soon",
+    category: "Coming Soon",
+    tools: ["Coming Soon"],
+    desc: "Coming Soon",
     projLink: "",
     imgSrc: "",
   },
   {
     title: "Magical Moments",
-    category: "design",
-    tools: ["Photoshop"],
-    desc: "A framed product ad for the Samsung Galaxy S6.",
-    projLink: "",
-    imgSrc: "",
-  },
-  {
-    title: "Website Design",
-    category: "web",
-    tools: ["HTML/CSS", "JavaScript", "Bootstrap"],
-    desc: "JARRIE, my first portfolio site, with filterable design and code work.",
+    category: "Coming Soon",
+    tools: ["Coming Soon"],
+    desc: "Coming Soon",
     projLink: "",
     imgSrc: "",
   },
@@ -55,12 +47,12 @@ const grid = document.getElementById('project-grid');
 
 function linksHTML(project) {
   const link = (href, icon, label) =>
-    `<a class="card-link mono" href="${href}" target="_blank" rel="noopener"><i class="bi ${icon}"></i> ${label} <i class="bi bi-arrow-up-right"></i></a>`;
+    `<a class="project-link mono" href="${href}" target="_blank" rel="noopener"><i class="bi ${icon}"></i> ${label} <i class="bi bi-arrow-up-right"></i></a>`;
   const links = [
     project.projLink && link(project.projLink, 'bi-github', 'Repository'),
     project.siteLink && link(project.siteLink, 'bi-globe2', 'Website'),
   ].filter(Boolean);
-  return links.length ? `<div class="card-links">${links.join('')}</div>` : '';
+  return links.length ? `<div class="project-links">${links.join('')}</div>` : '';
 }
 
 function cardHTML(project) {

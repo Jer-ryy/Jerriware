@@ -63,7 +63,7 @@
 }
 
 /* sits at the bottom of the card, so links line up across a row */
-.card-links {
+.project-links {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -71,7 +71,7 @@
   margin-top: auto;
   padding-top: 1.1rem;
 }
-.card-link {
+.project-link {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -80,7 +80,7 @@
   text-decoration: none;
   transition: color 0.2s;
 }
-.card-link > .bi:first-child { font-size: 1.05rem; }
-.card-link .bi-arrow-up-right { font-size: 0.75rem; color: var(--muted); transition: transform 0.2s, color 0.2s; }
-.card-link:hover { color: var(--accent); }
-.card-link:hover .bi-arrow-up-right { color: var(--accent); transform: translate(2px, -2px); }
+.project-link > .bi:first-child { font-size: 1.05rem; }
+.project-link .bi-arrow-up-right { font-size: 0.75rem; color: var(--muted); transition: transform 0.2s, color 0.2s; }
+.project-link:hover { color: var(--accent); }
+.project-link:hover .bi-arrow-up-right { color: var(--accent); transform: translate(2px, -2px); }
