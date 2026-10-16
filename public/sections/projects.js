@@ -1,6 +1,22 @@
 // Add projects here. Leave imgSrc empty to show a placeholder cover.
 const projects = [
   {
+    title: "AIGC Image Detector",
+    category: "ai",
+    tools: ["Python", "PyTorch", "CLIP", "OpenCV"],
+    desc: "Team prototype that flags AI-generated images, even after JPEG, blur and resizing. Fuses a frozen CLIP ViT-B/16 with an SRM artifact branch; 0.996 AUROC on clean images. I led evaluation and deliverables.",
+    projLink: "https://github.com/windyheng/choochoo",
+    imgSrc: "aigcImg.png",
+  },
+  {
+    title: "Stardust Neverland",
+    category: "web",
+    tools: ["Node.js", "Express", "PostgreSQL", "React", "D3.js"],
+    desc: "Full-stack web game built by a five-person team: climb floors, play mini-games for currency, gear up and fight bosses. Includes JWT auth and an admin dashboard with D3 analytics.",
+    projLink: "https://github.com/Jer-ryy/stardustneverland",
+    imgSrc: "",
+  },
+  {
     title: "Movie Poster",
     category: "design",
     tools: ["Photoshop"],
@@ -37,7 +53,8 @@ const projects = [
 const grid = document.getElementById('project-grid');
 
 function cardHTML(project) {
-  const icon = project.category === 'web' ? 'bi-code-slash' : 'bi-palette';
+  const icons = { ai: 'bi-cpu', web: 'bi-code-slash', design: 'bi-palette' };
+  const icon = icons[project.category] || 'bi-folder';
   const media = project.imgSrc
     ? `<div class="cover">
         <img src="assets/${project.imgSrc}" class="cover-image" alt="${project.title}" loading="lazy" />
@@ -56,6 +73,7 @@ function cardHTML(project) {
           <h2>${project.title}</h2>
           <p class="text-muted">${project.desc}</p>
           <div class="tools">${project.tools.map((t) => `<span>${t}</span>`).join('')}</div>
+          ${project.projLink ? `<a class="repo-link mono" href="${project.projLink}" target="_blank" rel="noopener"><i class="bi bi-github"></i> Repository <i class="bi bi-arrow-up-right"></i></a>` : ''}
         </div>
       </article>
     </div>`;

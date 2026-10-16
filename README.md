@@ -10,7 +10,7 @@ The site is a dark-themed, single scrolling page with no front-end framework or 
 | --- | --- |
 | **Home** | Typewriter hero, tech stack and a Python "code card" intro |
 | **About** | Three cards: applied AI, automation and full stack |
-| **Projects** | Project grid with category filters (All / Design / Web) |
+| **Projects** | Project grid with category filters (All / AI / Design / Web) |
 | **Resume** | Experience, projects, education and skills in VS Code-style panels, with a PDF download |
 | **Contact** | Validated contact form that opens a pre-filled email |
 
@@ -54,7 +54,7 @@ Add an entry to the `projects` array in `public/sections/projects.js`:
 ```js
 {
   title: "Project name",
-  category: "web",            // matches a filter button: "design" or "web"
+  category: "ai",             // matches a filter button: "ai", "web" or "design"
   tools: ["Python", "Node.js"],
   desc: "One-line description.",
   projLink: "https://...",    // leave empty for no link

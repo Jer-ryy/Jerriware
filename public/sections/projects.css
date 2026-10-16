@@ -24,6 +24,8 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: border-color 0.25s;
 }
 .project-card:hover { border-color: #3a3a52; }
@@ -44,9 +46,9 @@
 }
 .cover-placeholder i { font-size: 2.25rem; color: var(--accent); }
 .cover-placeholder span { font-size: 0.75rem; letter-spacing: 0.06em; }
-.cover-image { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.cover-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
-.project-body { padding: 1.1rem 1.25rem 1.4rem; }
+.project-body { padding: 1.1rem 1.25rem 1.4rem; flex: 1; display: flex; flex-direction: column; }
 .project-body h2 { font-size: 1.15rem; font-weight: 700; margin: 0.35rem 0 0.4rem; }
 .project-body p { font-size: 0.92rem; }
 .project-cat { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
@@ -59,3 +61,21 @@
   border-radius: 6px;
   padding: 0.15rem 0.5rem;
 }
+
+/* sits at the bottom of the card, so links line up across a row */
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 1.1rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.repo-link .bi-github { font-size: 1.05rem; }
+.repo-link .bi-arrow-up-right { font-size: 0.75rem; color: var(--muted); transition: transform 0.2s, color 0.2s; }
+.repo-link:hover { color: var(--accent); }
+.repo-link:hover .bi-arrow-up-right { color: var(--accent); transform: translate(2px, -2px); }
