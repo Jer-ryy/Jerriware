@@ -78,7 +78,29 @@ a:hover { color: #e07bff; }
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
-.site-nav .nav-logo { width: 4.5rem; }
+/* Terminal-style wordmark: Jerry:\Ng> with a blinking cursor */
+.nav-prompt {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.nav-prompt:hover { color: var(--text); }
+.nav-prompt .sep { color: var(--muted); }
+.nav-prompt .caret { color: var(--accent); margin-left: 0.1em; }
+.nav-prompt .cursor {
+  width: 0.55em;
+  height: 1.1em;
+  margin-left: 0.25em;
+  background: var(--accent);
+  animation: nav-blink 1.1s steps(1) infinite;
+}
+@keyframes nav-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .nav-prompt .cursor { animation: none; }
+}
 .site-nav .nav-link {
   color: var(--muted);
   font-weight: 600;

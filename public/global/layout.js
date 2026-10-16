@@ -20,7 +20,7 @@
   document.body.insertAdjacentHTML('afterbegin', `
     <nav class="navbar fixed-top navbar-expand-lg site-nav">
       <div class="container">
-        <a class="navbar-brand" href="#home"><img src="assets/logo-v4.png" class="nav-logo" alt="Jerry"></a>
+        <a class="navbar-brand nav-prompt mono" href="#home" aria-label="Jerry Ng, back to top"><span class="text-gradient">Jerry</span><span class="sep">:&#92;</span>Ng<span class="caret">&gt;</span><span class="cursor" aria-hidden="true"></span></a>
         <div class="navbar-nav ms-auto d-none d-lg-flex">${navLinks}</div>
       </div>
     </nav>`);
