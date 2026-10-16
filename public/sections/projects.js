@@ -1,4 +1,4 @@
-// Add projects here. Leave imgSrc empty to show a placeholder cover.
+// Add projects here. Leave imgSrc empty to show a placeholder cover; siteLink (a live demo) is optional.
 const projects = [
   {
     title: "AIGC Image Detector",
@@ -14,7 +14,8 @@ const projects = [
     tools: ["Node.js", "Express", "PostgreSQL", "React", "D3.js"],
     desc: "Full-stack web game built by a five-person team: climb floors, play mini-games for currency, gear up and fight bosses. Includes JWT auth and an admin dashboard with D3 analytics.",
     projLink: "https://github.com/Jer-ryy/stardustneverland",
-    imgSrc: "",
+    siteLink: "https://stardustneverland.onrender.com/",
+    imgSrc: "stardustNvrLandGame.png",
   },
   {
     title: "Movie Poster",
@@ -52,6 +53,16 @@ const projects = [
 
 const grid = document.getElementById('project-grid');
 
+function linksHTML(project) {
+  const link = (href, icon, label) =>
+    `<a class="card-link mono" href="${href}" target="_blank" rel="noopener"><i class="bi ${icon}"></i> ${label} <i class="bi bi-arrow-up-right"></i></a>`;
+  const links = [
+    project.projLink && link(project.projLink, 'bi-github', 'Repository'),
+    project.siteLink && link(project.siteLink, 'bi-globe2', 'Website'),
+  ].filter(Boolean);
+  return links.length ? `<div class="card-links">${links.join('')}</div>` : '';
+}
+
 function cardHTML(project) {
   const icons = { ai: 'bi-cpu', web: 'bi-code-slash', design: 'bi-palette' };
   const icon = icons[project.category] || 'bi-folder';
@@ -73,7 +84,7 @@ function cardHTML(project) {
           <h2>${project.title}</h2>
           <p class="text-muted">${project.desc}</p>
           <div class="tools">${project.tools.map((t) => `<span>${t}</span>`).join('')}</div>
-          ${project.projLink ? `<a class="repo-link mono" href="${project.projLink}" target="_blank" rel="noopener"><i class="bi bi-github"></i> Repository <i class="bi bi-arrow-up-right"></i></a>` : ''}
+          ${linksHTML(project)}
         </div>
       </article>
     </div>`;

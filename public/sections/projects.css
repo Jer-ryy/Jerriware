@@ -63,19 +63,24 @@
 }
 
 /* sits at the bottom of the card, so links line up across a row */
-.repo-link {
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  margin-top: auto;
+  padding-top: 1.1rem;
+}
+.card-link {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  align-self: flex-start;
-  margin-top: auto;
-  padding-top: 1.1rem;
   font-size: 0.85rem;
   color: var(--text);
   text-decoration: none;
   transition: color 0.2s;
 }
-.repo-link .bi-github { font-size: 1.05rem; }
-.repo-link .bi-arrow-up-right { font-size: 0.75rem; color: var(--muted); transition: transform 0.2s, color 0.2s; }
-.repo-link:hover { color: var(--accent); }
-.repo-link:hover .bi-arrow-up-right { color: var(--accent); transform: translate(2px, -2px); }
+.card-link > .bi:first-child { font-size: 1.05rem; }
+.card-link .bi-arrow-up-right { font-size: 0.75rem; color: var(--muted); transition: transform 0.2s, color 0.2s; }
+.card-link:hover { color: var(--accent); }
+.card-link:hover .bi-arrow-up-right { color: var(--accent); transform: translate(2px, -2px); }

@@ -57,7 +57,8 @@ Add an entry to the `projects` array in `public/sections/projects.js`:
   category: "ai",             // matches a filter button: "ai", "web" or "design"
   tools: ["Python", "Node.js"],
   desc: "One-line description.",
-  projLink: "https://...",    // leave empty for no link
+  projLink: "https://...",    // GitHub repo, shown as "Repository"; leave empty for no link
+  siteLink: "https://...",    // optional live demo, shown as "Website"
   imgSrc: "Cover-Image.png",  // file in public/assets/, or "" for a placeholder cover
 }
 ```
