@@ -118,7 +118,6 @@
   counter-reset: line;
   overflow-x: auto;
 }
-.code .line { display: block; }
 .code .line::before {
   counter-increment: line;
   content: counter(line);
@@ -136,6 +135,8 @@
 .code .p { color: #f78c6c; }   /* self */
 .code .o { color: #89ddff; }   /* operators */
 .code .cm { color: #637777; font-style: italic; }
+.code-link { text-decoration: none; text-underline-offset: 3px; }
+.code-link:hover { color: #e6ffb3; text-decoration: underline; }
 .code .cursor {
   display: inline-block;
   width: 0.55em;
